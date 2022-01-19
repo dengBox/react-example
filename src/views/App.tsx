@@ -1,24 +1,28 @@
-import React from 'react'
-import './App.css'
+import './App.scss'
+import { FC, Suspense } from 'react'
+import router from '../routes'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+      {
+        router.map(({ path, Component }, key) => {
+          return <Route
+            key={ key }
+            path={ path }
+            element={
+              <Suspense fallback="加载失败">
+                <Component />
+              </Suspense>
+            }
+          />
+        })
+      }
+      </Routes>
+    </Router>
+  )
 }
 
 export default App

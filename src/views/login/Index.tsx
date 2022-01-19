@@ -1,6 +1,7 @@
 import './index.scss'
+import { FC } from 'react'
 
-function Login() {
+const Login: FC = () => {
   return (
     <div className="App"></div>
   )
