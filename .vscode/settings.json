@@ -1,0 +1,20 @@
+{
+  // "workbench.colorTheme": "Monokai",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.tabSize": 2,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+      "javascript",{
+          "language": "vue",
+          "autoFix": true
+      },"html",
+      "vue"
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "vetur.validation.template": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "git.ignoreLimitWarning": true
+}
