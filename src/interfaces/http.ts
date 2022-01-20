@@ -2,9 +2,8 @@ export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
 export interface FetchOptions {
   url: string
-  method: Method
-  showErrorMsg?: boolean
-  payload: any
+  query?: boolean
+  body?: any
   headers?: any
 }
 
