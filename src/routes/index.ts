@@ -18,6 +18,11 @@ const router = [
     exact: true // 是否为严格模式
   },
   {
+    path: '/json',
+    Component: lazy(() => import('@/views/json-view/Index')),
+    exact: true // 是否为严格模式
+  },
+  {
     path: '*',
     Component: NoMatch
   }

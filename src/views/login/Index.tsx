@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 const Login: FC = () => {
   return (
-    <div className="App"></div>
+    <div className="login">login</div>
   )
 }
 
